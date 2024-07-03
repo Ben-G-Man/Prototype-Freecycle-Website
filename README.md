@@ -17,6 +17,6 @@ To give away (something used or unwanted), as opposed to selling it or throwing 
 - Contact form meeting the criteria outline in the brief.
 - Dummy listing slideshow via JavaScript.
 
-![Screenshots of Freecycle landing page](https://github.com/Ben-G-Man/Prototype-Freecycle-Website/example_1.png)
+![Screenshots of Freecycle landing page](https://github.com/Ben-G-Man/Prototype-Freecycle-Website/blob/main/example_1.png)
 
-![Screenshots of Freecycle sign up form](https://github.com/Ben-G-Man/Prototype-Freecycle-Website/example_2.png)
+![Screenshots of Freecycle sign up form](https://github.com/Ben-G-Man/Prototype-Freecycle-Website/blob/main/example_2.png)
