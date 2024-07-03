@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Freecycle!</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header-bg">
+        <div class="header-bg-left">
+            <div class="search-menu">
+                <select tabindex=1 name="Region">
+                    <option>Wellington</option>
+                    <option>Auckland</option>
+                    <option>Bay of Plenty</option>
+                    <option>Canterbury</option>
+                    <option>Northland</option>
+                    <option>Otago</option>
+                    <option>Southland</option>
+                    <option>West Coast</option>
+                    <option>Gisborne</option>
+                    <option>Manawatu</option>
+                    <option>Tasman</option>
+                    <option>Nelson</option>
+                    <option>Coromandel</option>
+                    <option>Queenstown</option>
+                    <option>Taupo</option>
+                    <option>Wanaka</option>
+                    <option>Dunedin</option>
+                    <option>Hamilton</option>
+                    <option>Napier</option>
+                    <option>Rotorua</option>
+                    <option>Tauranga</option>
+                </select>
+                <input tabindex=2 id="search-bar" placeholder="Search free stuff!">
+                <div tabindex=3 class="search-button">
+                    <img src="search.png" draggable="false">
+                </div>
+            </div>
+        </div>
+        <div class="header-bg-right">
+            <a tabindex=10>SIGN IN</a>
+            <a tabindex=9>ABOUT</a>
+            <a tabindex=8><b><u>HOME</u></b></a>
+        </div>
+    </div>
+    <div class="header-fg">
+        <h1><b>FREE</b>CYCLE!</h1>
+        <img tabindex=4 alt="Instagram logo" src="instagram.png" draggable="false">
+        <img tabindex=5 alt="Facebook logo" src="facebook.png" draggable="false">
+        <img tabindex=6 alt="Twitter logo" src="twitterx.png" draggable="false">
+        <img tabindex=7 alt="Ted Talk logo" src="ted.png" draggable="false">
+    </div>
+
+    <div class="landing">
+        <img src="landing.png" draggable="false">
+        <div tabindex=11 onclick="showSignUp()" id="trigger-modal" class="landing-content">
+            <h1>SIGN UP</h1>
+            <h2>SAVE MONEY<b>,</b></h2>
+            <h2>SAVE THE PLANET</h2>
+        </div>
+    </div>
+
+    <div class="further-content">
+        <div class="showcase">
+            <h1>WHAT'S NEW</h1>
+            <button class="leftScroll" onclick="setShowcase(-1)">PREV</button>
+            <img alt="A listing for a Fender electric guitar" id="showcase-img" src="showcase_0.jpg">
+            <h2 id="showcase-title">2003 hi-Fi amplifier</h2>
+            <a>Item description as follows - lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis iure nihil assumenda quaerat ducimus adipisci qui inventore commodi hic. Dolores reiciendis repellat illo voluptatum inventore quas atque asperiores id cupiditate.</a>
+            <button class="rightScroll" onclick="setShowcase(1)">NEXT</button>.
+        </div>
+        <div class="about">
+            <h1>OUR VISION</h1>
+            <a>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, laborum praesentium quam facilis cumque, non perspiciatis accusantium repellat, eos quia velit quisquam nihil? Optio impedit sapiente ex ipsam praesentium hic.</a>
+            <h1>OUR PROGRESS</h1>
+            <a>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia adipisci officiis tempora quos architecto vel, ea fugit. Corporis aperiam veniam, in rerum quod deleniti quo itaque praesentium eius expedita fuga!</a>
+            <h1>HOW YOU CAN HELP</h1>
+            <a>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet assumenda soluta debitis expedita ratione quam natus reprehenderit fugit porro, cumque harum quia esse. Voluptate, iste fuga quod molestias repudiandae dolorum.</a>
+        </div>
+        <div class="bottom-bar">
+            <a>Website designed by Benjamin Hume - </a>
+            <a><i>bhum783 - ID 140866692</i></a>
+        </div>
+    </div>    
+
+    <div class="form-background" id="form-ct">
+        <form class="sign-up-form" visibility="hidden">
+            <button class="close-form" onclick="hideSignUp()">X</button>
+
+            <h1>SIGN UP!</h1>
+
+            <div id="user-details">
+                <h2>User Details</h2>
+                <label for="given-name">Given name</label>
+                <input id="given-name">
+                <label for="surname">Surname</label>
+                <input id="surname">
+                <label for="username">Username</label>
+                <input id="username">
+                <label for="password">Password</label>
+                <input id="password">
+            </div>
+
+            <br>
+
+            <div id="address-details">
+                <h2>Addresses</h2>
+                <label for="home-address">Home address</label>
+                <input id="home-address">
+                <label for="work-address">Work address</label>
+                <input id="work-address">
+            </div>
+
+            <br>
+
+            <div id="contact-details">
+                <h2>Contacts</h2>
+                <label for="mobile-number">Mobile number</label>
+                <input id="mobile-number">
+                <label for="email">Email</label>
+                <input id="email">
+            </div>
+
+            <button class="submit-form">SUBMIT</button>
+        </form>
+    </div>
+    <script> 
+        function showSignUp() {
+            document.getElementById("form-ct").style.setProperty("visibility", "visible");
+        }
+
+        function hideSignUp() {
+            document.getElementById("form-ct").style.setProperty("visibility", "hidden");
+        }
+
+        var showcaseIndex = 0;
+        var showcaseTitles = ["2003 hi-Fi amplifier", "Bookshelf-speaker set", "Fender electric guitar", "2010 bar mini-fridge"];
+
+        function setShowcase(dif) {
+            showcaseIndex += dif;
+            if (showcaseIndex < 0)
+            {
+                showcaseIndex = 3;
+            }
+
+            if (showcaseIndex > 3)
+            {
+                showcaseIndex = 0;
+            }
+
+            document.getElementById("showcase-title").innerHTML = showcaseTitles[showcaseIndex]; 
+            document.getElementById("showcase-img").setAttribute("alt", "A listing for a " + showcaseTitles[showcaseIndex]);
+            document.getElementById("showcase-img").setAttribute("src", "showcase_" + showcaseIndex + ".jpg");
+        }
+    </script> 
+  </body>
+</html>
